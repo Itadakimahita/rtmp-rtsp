@@ -1,9 +1,9 @@
 import subprocess
 import os
 
-ffmpeg_path = "C:/ffmpeg/ffmpeg.exe"
+ffmpeg_path = "C:/ffmpeg/ffmpeg.exe" # ffmepg path or "ffmpeg"
 
-rtmp_url = "rtmp://127.0.0.1/stream/stream"
+rtmp_url = "rtmp://127.0.0.1/stream/stream" # localhost based on nginx rtmp server
 output_file = "test_output.mp4"
 
 if os.path.exists(output_file):
@@ -20,7 +20,7 @@ command = [
 print("📡 Ждём RTMP поток на:", rtmp_url)
 print("📥 Сохраняем в:", output_file)
 
-try:
+try:        
     subprocess.run(command)
 except KeyboardInterrupt:
     print("🛑 Остановлено пользователем")
