@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  nginx-rtmp:
+    image: alfg/nginx-rtmp
+    ports:
+      - "1935:1935"    # RTMP порт
+      - "8080:80"
+    restart: always
