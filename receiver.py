@@ -16,7 +16,7 @@ def rtmp2rtp():
         "-re",  # имитировать реальное время
         "-i", rtmp_url,  # входной RTMP поток
         "-an",  # отключить аудио (для начала)
-        "-c:v", "copy",  # без перекодирования
+        "-c:v", "libx264", "-preset", "ultrafast", "-tune", "zerolatency"  
         "-f", "rtp",  # выходной формат
         rtp_url
     ]

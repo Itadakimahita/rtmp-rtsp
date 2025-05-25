@@ -15,4 +15,5 @@ async def rtp_listener():
         packet = RtpPacket.parse(data)
         print(f"🎞️ Получен пакет: seq={packet.sequence_number}, timestamp={packet.timestamp}")
 
+
 asyncio.run(rtp_listener())
