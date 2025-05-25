@@ -52,6 +52,11 @@ line 7:
 ffmpeg_path = "C:/ffmpeg/ffmpeg.exe"  # путь к ffmpeg
 ```
 
+### Запуск nginx сервера для принятия RTMP трансляции на порте 1935
+```bash
+docker-compose up -d
+```
+
 ### 1. Запуск RTMP → RTP ретранслятора
 ```bash
 python rtmp2rtp.py
