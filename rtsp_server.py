@@ -12,7 +12,7 @@ a=control:*
 m=video 5004 RTP/AVP 96
 a=rtpmap:96 H264/90000
 a=control:track1
-"""
+""" # грубно указанный PORT
 
 class RTSPServerProtocol(asyncio.Protocol):
     def __init__(self):

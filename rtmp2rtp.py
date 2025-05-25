@@ -15,9 +15,13 @@ async def start_stream(stream_key):
     
     command = [
         ffmpeg_path,
+        "-re",
         "-i", rtmp_url,
-        "-c:v", "copy",
         "-an",
+        "-c:v",
+        "libx264",  "-preset",
+        "ultrafast", "-tune",
+        "zerolatency",
         "-f", "rtp",
         f"rtp://127.0.0.1:{port}"
     ]
